@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    <bean name="hello" class="cogent.April4.Greeting"></bean>
+    <bean name="emp" class="cogent.April4.Employee" p:id="20" p:name="David"></bean>
+	<bean name="person" class="cogent.April4.Person">
+		<property name="id" value="1001"></property>
+		<property name="name" value="Shiva"></property>
+		<property name="age" value="30"></property>
+	</bean>
+	<bean name="personc" class="cogent.April4.PersonC">
+		<constructor-arg value="1001"></constructor-arg>
+		<constructor-arg value="Shiva"></constructor-arg>
+		<constructor-arg value="30"></constructor-arg>
+	</bean>
+	<bean name="hospital" class="cogent.April4.Hospital">
+		<property name="name" value="JohnHopkins"></property>
+		<property name="department">
+			<list>
+				<value>Front Office</value>
+				<value>In Patient</value>
+				<value>Out Patient</value>
+			</list>
+		</property>
+	</bean>
+	
+	<bean name="customer" class="cogent.April4.Customer">
+		<property name="id" value="2001"></property>
+		<property name="products">
+			<map>
+				<entry key="1001" value="Iphone"></entry>
+				<entry key="1002" value="Samsung"></entry>
+				<entry key="1003" value="Oppo"></entry>
+				<entry key="1004" value="Nokia"></entry>
+			</map>
+		</property>
+	</bean>
+	
+	<bean name="cardealer" class="cogent.April4.CarDealer">
+		<property name="name" value="Newyork Dealer"></property>
+		<property name="models">
+			<set>
+				<value>Honda</value>
+				<value>BMW</value>
+				<value>Honda</value>
+				<value>Ford</value>
+			</set>
+		</property>
+	</bean>
+	
+	<bean name="scores" class="cogent.April4.Scores">
+		<property name="maths" value="80"></property>
+		<property name="physics" value="60"></property>
+		<property name="chemestry" value="70"></property>
+	</bean>
+	<bean name="student" class="cogent.April4.Student" p:scores-ref="scores"></bean>
+</beans>
