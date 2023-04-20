@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        img{
+            height: 150px;
+            width: 150px;
+        }
+    </style>
+    <title>Tshirt Product</title>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Price</td>
+            <td>Image</td>
+        </tr>
+        <tr *ngFor="let item of itemList" align="left">
+            <td>{{item.num}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.price}}</td>
+            <td><img [src]="item.image"></td>
+            <td><button (click)="toggle()">Edit</button></td>
+            <td><button (click)="delete(itemList.indexOf(item))">Delete</button></td>
+            
+            <div *ngIf="isForm">
+                <form id="editingForm">
+                    <table>
+                        Update Id: <!--<input type="text" [(ngModel)]="itemList.indexOf(item).num">-->
+                        Update name:
+                        Update price:
+                    </table>
+                </form>
+            </div>
+        </tr>
+       
+    </table>
+
+    <div>
+        
+    </div>
+
+    
+</body>
+</html>
