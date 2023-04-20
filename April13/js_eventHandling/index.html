@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Event Handling</title>
+        <script src="script.js"></script>
+        <script>
+            function yellow(){
+                document.getElementById("name_txt").style.background="yellow";
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="green()">Green</button>
+        <a href="" onmouseover="red()" onmouseout="white()">REEEED</a>
+
+        <form>
+            <label>Enter name</label>
+            <input type="text" id="name_txt" onblur="yellow()">
+            <label>Enter pass</label>
+            <input type="passwprd" id="password_txt">
+        </form>
+    </body>
+</html>

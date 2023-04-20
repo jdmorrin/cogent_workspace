@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login Form</title>
+        <script language="Javascript">
+            function validate(){
+                if(document.loginform.user.value=="" || document.loginform.password.value==""){
+                    alert("Pleaes enter all fields");
+                    document.loginform.user.focus();
+                    return false;
+                }
+                return true;
+            }
+        </script>
+    </head>
+    <body>
+        <form name="loginform" onsubmit="return validate()">
+            Username: <input type="text" name="user"><br>
+            Password: <input type="password" name="password"><br>
+            <input type="submit" value="submit">
+        </form>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Question Four</title>
+    </head>
+    <body>
+        <script>
+            function myToString(){
+                return '"'+this.title+'" by '+ this.author +' costs '+ this.price;
+            }
+
+            function showAll(){
+                document.write(this.toString());
+            }
+
+            var myBook = {
+                title: "No Country for Old Men",
+                author: "I don't remember the name of the Author",
+                price: 55.55,
+                print: showAll,
+                toString: myToString
+            };
+
+            myBook.print();
+        </script>
+        <pre>
+            
+        </pre>
+    </body>
+</html>
