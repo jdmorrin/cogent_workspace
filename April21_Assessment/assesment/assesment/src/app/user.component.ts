@@ -29,7 +29,7 @@ export class UserComponent implements OnInit{
     }
 
     delete(id:number){
-        this
+        this.service.deleteUser(id).subscribe();
     }
 
     ngOnInit(): void {
